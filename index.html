@@ -1,0 +1,1875 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheetal G. | Independent AI & Cloud Technology Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              brand: {
+                dark: "#0a0f1d",
+                card: "#111827",
+                cardHover: "#1f2937",
+                border: "#1f2937",
+                blue: "#3b82f6",
+                cyan: "#06b6d4",
+                teal: "#14b8a6",
+                emerald: "#10b981",
+                amber: "#f59e0b",
+                purple: "#8b5cf6",
+              },
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              glow: "glow 2s ease-in-out infinite alternate",
+            },
+            keyframes: {
+              glow: {
+                "0%": { boxShadow: "0 0 15px rgba(6, 182, 212, 0.2)" },
+                "100%": { boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #070a12;
+        color: #e2e8f0;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Glassmorphism background */
+      .glass-panel {
+        background: rgba(17, 24, 39, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .glass-card {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .glass-card:hover {
+        border-color: rgba(6, 182, 212, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #070a12;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
+
+      .gradient-text-cyan {
+        background: linear-gradient(135deg, #38bdf8 0%, #14b8a6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient-text-amber {
+        background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Custom Timeline line */
+      .timeline-line::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981, #f59e0b);
+        z-index: 0;
+      }
+      @media (max-width: 768px) {
+        .timeline-line::before {
+          top: 0;
+          bottom: 0;
+          left: 20px;
+          width: 2px;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-slate-300 selection:bg-cyan-500 selection:text-black">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center space-x-3 group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform"
+          >
+            SG
+          </div>
+          <div>
+            <span
+              class="font-bold text-lg text-white tracking-wide block leading-none"
+              >Sheetal G.</span
+            >
+            <span class="text-xs text-cyan-400 font-mono mt-1 block"
+              >AI & Cloud Consultant</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#about" class="hover:text-cyan-400 transition-colors"
+            >About</a
+          >
+          <a href="#evolution" class="hover:text-cyan-400 transition-colors"
+            >Evolution</a
+          >
+          <a href="#capabilities" class="hover:text-cyan-400 transition-colors"
+            >Capabilities</a
+          >
+          <a href="#tech-stack" class="hover:text-cyan-400 transition-colors"
+            >Tech Stack</a
+          >
+          <a href="#portfolio" class="hover:text-cyan-400 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="#finsight-demo"
+            class="hover:text-cyan-400 transition-colors flex items-center text-cyan-400"
+          >
+            <span class="relative flex h-2 w-2 mr-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"
+              ></span>
+            </span>
+            Live Demo
+          </a>
+          <a href="#outcomes" class="hover:text-cyan-400 transition-colors"
+            >Impact</a
+          >
+        </div>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <a
+            href="https://github.com/stratopedia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+            title="GitHub Profile"
+          >
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a
+            href="#contact"
+            class="px-4 py-2 text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 rounded-lg shadow-lg shadow-cyan-500/20 transition-all hover:scale-105"
+          >
+            Let's Connect
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-slate-400 hover:text-white p-2"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass-panel border-b border-slate-800 px-4 pt-2 pb-6 space-y-3"
+      >
+        <a href="#about" class="block py-2 text-slate-300 hover:text-cyan-400"
+          >About</a
+        >
+        <a
+          href="#evolution"
+          class="block py-2 text-slate-300 hover:text-cyan-400"
+          >Evolution</a
+        >
+        <a
+          href="#capabilities"
+          class="block py-2 text-slate-300 hover:text-cyan-400"
+          >Capabilities</a
+        >
+        <a
+          href="#tech-stack"
+          class="block py-2 text-slate-300 hover:text-cyan-400"
+          >Tech Stack</a
+        >
+        <a
+          href="#portfolio"
+          class="block py-2 text-slate-300 hover:text-cyan-400"
+          >Portfolio & Demo</a
+        >
+        <a
+          href="#outcomes"
+          class="block py-2 text-slate-300 hover:text-cyan-400"
+          >Impact</a
+        >
+        <div
+          class="pt-4 flex items-center justify-between border-t border-slate-800"
+        >
+          <a
+            href="https://github.com/stratopedia"
+            target="_blank"
+            class="text-slate-400 hover:text-white"
+          >
+            <i class="fab fa-github text-xl mr-2"></i> github.com/stratopedia
+          </a>
+          <a
+            href="#contact"
+            class="px-4 py-2 text-xs font-semibold text-slate-950 bg-cyan-400 rounded-md"
+            >Connect</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden"
+      id="about"
+    >
+      <!-- Grid overlay & glow background -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/3 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div
+            class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 mb-8 text-xs sm:text-sm font-medium text-cyan-400 shadow-xl"
+          >
+            <span
+              class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"
+            ></span>
+            <span>INDEPENDENT AI & CLOUD TECHNOLOGY CONSULTANT</span>
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight"
+          >
+            Engineering practical, cloud-native &
+            <span class="gradient-text-cyan">AI-enabled solutions</span>
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-normal"
+          >
+            Delivering scalable architecture, intelligent workflows, and
+            reliable backends for
+            <strong class="text-slate-200">FinTech, BFSI</strong>, and digital
+            platforms.
+          </p>
+
+          <!-- Core Tags -->
+          <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <span
+              class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-cyan-300 border-cyan-500/20 flex items-center"
+            >
+              <i class="fas fa-brain mr-2 text-cyan-400"></i> AI Engineering
+            </span>
+            <span
+              class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-blue-300 border-blue-500/20 flex items-center"
+            >
+              <i class="fas fa-cloud mr-2 text-blue-400"></i> Cloud Architecture
+            </span>
+            <span
+              class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-emerald-300 border-emerald-500/20 flex items-center"
+            >
+              <i class="fas fa-server mr-2 text-emerald-400"></i> Backend & APIs
+            </span>
+            <span
+              class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-amber-300 border-amber-500/20 flex items-center"
+            >
+              <i class="fas fa-chart-line mr-2 text-amber-400"></i> FinTech /
+              BFSI
+            </span>
+          </div>
+
+          <!-- GitHub Banner link -->
+          <div
+            class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <a
+              href="#finsight-demo"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 hover:opacity-90 shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center"
+            >
+              <i class="fas fa-play text-sm mr-2.5"></i> Explore Interactive
+              Demo
+            </a>
+            <a
+              href="https://github.com/stratopedia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-slate-200 glass-panel hover:bg-slate-800 border-slate-700/80 transition-all flex items-center justify-center"
+            >
+              <i class="fab fa-github text-lg mr-2.5"></i> View GitHub Repo
+            </a>
+          </div>
+        </div>
+
+        <!-- Core Proposition Card -->
+        <div
+          class="mt-16 max-w-4xl mx-auto glass-panel rounded-2xl p-6 sm:p-8 border-cyan-500/30 shadow-2xl relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl pointer-events-none"
+          ></div>
+          <div
+            class="text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6"
+          >
+            <div>
+              <span
+                class="text-xs font-mono tracking-wider text-cyan-400 uppercase font-semibold"
+                >Core Proposition</span
+              >
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">
+                Idea <span class="text-cyan-400">→</span> Architecture
+                <span class="text-teal-400">→</span> Working Prototype
+                <span class="text-emerald-400">→</span> Cloud Implementation
+              </h3>
+              <p class="text-sm text-slate-400 mt-2">
+                I help technology teams fast-track their AI journey without
+                compromising enterprise stability.
+              </p>
+            </div>
+            <div class="shrink-0">
+              <span
+                class="inline-block px-4 py-2 rounded-xl bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 font-mono text-xs"
+              >
+                Sheetal G. • Independent Consultant
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 relative bg-slate-950/60 border-y border-slate-800/80"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            What I Bring to a Collaboration
+          </h2>
+          <p class="text-slate-400 mt-3">
+            End-to-end expertise bridging executive vision with production-grade
+            engineering.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1: Business -> technology -->
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div class="w-1.5 h-full absolute top-0 left-0 bg-blue-500"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              Business → Technology
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Translate business problems into robust architecture, APIs, data
+              flows, and measurable delivery outcomes.
+            </p>
+          </div>
+
+          <!-- Card 2: AI + cloud engineering -->
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div class="w-1.5 h-full absolute top-0 left-0 bg-cyan-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-microchip"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              AI + Cloud Engineering
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Build practical RAG, agentic and automation prototypes and connect
+              them to production-oriented cloud patterns.
+            </p>
+          </div>
+
+          <!-- Card 3: Modern backend systems -->
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div
+              class="w-1.5 h-full absolute top-0 left-0 bg-emerald-400"
+            ></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-400/10 text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              Modern Backend Systems
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Java/Spring Boot, event-driven microservices, REST API, GraphQL,
+              security, data and observability.
+            </p>
+          </div>
+
+          <!-- Card 4: Independent delivery -->
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div class="w-1.5 h-full absolute top-0 left-0 bg-amber-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-user-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              Independent Delivery
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Engage as consultant, technical collaborator, fractional
+              engineering lead or hands-on builder.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 relative" id="evolution">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Career Evolution</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            From Software Delivery to Independent Consulting
+          </h2>
+        </div>
+
+        <!-- Timeline graphic -->
+        <div class="relative timeline-line max-w-5xl mx-auto my-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+            <!-- Step 1 -->
+            <div
+              class="glass-card rounded-2xl p-6 border-blue-500/30 bg-slate-900/90 hover:border-blue-500 transition-colors"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-500 text-slate-950 font-bold flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30"
+              >
+                1
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1">
+                Software Engineering
+              </h3>
+              <p class="text-xs text-blue-400 font-mono mb-3">Foundation</p>
+              <ul class="text-xs text-slate-400 space-y-1">
+                <li>• Java, Android, Kotlin</li>
+                <li>• Python, Node.js, React, TypeScript</li>
+                <li>• Backend & Core APIs</li>
+                <br />
+                <li>
+                  <b>Clients: </b>UK NEST Pensions, Allianz Insurance, Data
+                  Center Dynamics, Bristol City Council
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+              class="glass-card rounded-2xl p-6 border-cyan-500/30 bg-slate-900/90 hover:border-cyan-500 transition-colors"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-cyan-400 text-slate-950 font-bold flex items-center justify-center mb-4 shadow-lg shadow-cyan-400/30"
+              >
+                2
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1">
+                Digital Transformation
+              </h3>
+              <p class="text-xs text-cyan-400 font-mono mb-3">
+                Enterprise Scope
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1">
+                <li>• Platform Modernization</li>
+                <li>• Data & App Migration</li>
+                <li>• Delivery Oversight</li>
+                <br />
+                <li>
+                  <b>Banking Clients: </b>Bank of America, Zurich Insurance,
+                  Capgemini Financial Services UK, The Co-Operative Bank,
+                  Manchester
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="glass-card rounded-2xl p-6 border-emerald-500/30 bg-slate-900/90 hover:border-emerald-500 transition-colors"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-emerald-400 text-slate-950 font-bold flex items-center justify-center mb-4 shadow-lg shadow-emerald-400/30"
+              >
+                3
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1">
+                Independent Consulting
+              </h3>
+              <p class="text-xs text-emerald-400 font-mono mb-3">Since 2018</p>
+              <ul class="text-xs text-slate-400 space-y-1">
+                <li>• Business Analysis</li>
+                <li>• Solution Architecture</li>
+                <li>• Technical Strategy</li>
+                <li>• Agile Delivery</li>
+                <br />
+                <li>Clients: Cable media, Super specialty hospitals, MSMEs</li>
+              </ul>
+            </div>
+
+            <!-- Step 4 -->
+            <div
+              class="glass-card rounded-2xl p-6 border-amber-500/30 bg-slate-900/90 hover:border-amber-500 transition-colors ring-2 ring-amber-500/20"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center mb-4 shadow-lg shadow-amber-400/30"
+              >
+                4
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1">
+                AI + Cloud Engineering
+              </h3>
+              <p class="text-xs text-amber-400 font-mono mb-3">Current Focus</p>
+              <ul class="text-xs text-slate-400 space-y-1">
+                <li>• GenAI & Agentic Workflows</li>
+                <li>• RAG Architecture</li>
+                <li>• AWS + GCP Cloud Native</li>
+                <br />
+                <li>
+                  Clients: Fintech platform for MSMEs, Healthcare Technology
+                  Management
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Direction Callout -->
+        <div
+          class="max-w-3xl mx-auto glass-panel rounded-xl p-6 border-slate-700"
+        >
+          <div class="flex items-start space-x-4">
+            <div class="p-3 rounded-lg bg-cyan-500/10 text-cyan-400">
+              <i class="fas fa-compass text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-white">Current Direction</h4>
+              <p class="text-sm text-slate-300 mt-1">
+                Independent consultant and collaborator for AI-enabled cloud
+                products, FinTech platforms, and engineering modernization
+                initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-slate-950/60 border-y border-slate-800/80"
+      id="capabilities"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Expertise Overview</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Capability Map
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Cap 1 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-cyan-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-robot text-cyan-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">AI Engineering</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i> RAG
+                Pipelines
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i>
+                Agentic Workflows
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i> LLM
+                Integration
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i>
+                Guardrails & Evaluation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 2 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-blue-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-cloud-upload-alt text-blue-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Cloud & Architecture</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i> AWS /
+                GCP
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                Serverless & Containers
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                Event-Driven Systems
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                Terraform / CI-CD
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 3 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-emerald-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-network-wired text-emerald-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Backend Engineering</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                Java / Spring Boot
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                Microservices
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                REST / GraphQL
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                Postgres / Redis / Elasticsearch
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 4 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-amber-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-cubes text-amber-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Product & Delivery</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Discovery → MVP
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Technical Roadmaps
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i> API
+                Contracts
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Prototype → Production
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 relative" id="tech-stack">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Tools & Frameworks</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Technology Landscape
+          </h2>
+          <p class="text-slate-400 text-sm mt-3 italic">
+            "Choose the smallest reliable technology set that solves the
+            business problem, then evolve it deliberately."
+          </p>
+        </div>
+
+        <!-- Tech stack rows -->
+        <div class="space-y-4 max-w-4xl mx-auto">
+          <!-- Row 1: Application -->
+          <div
+            class="glass-panel p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+          >
+            <div class="w-32 shrink-0">
+              <span
+                class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold font-mono"
+              >
+                Application
+              </span>
+            </div>
+            <div class="flex flex-wrap gap-2 text-sm text-slate-300 font-mono">
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">Java 8+</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Spring Boot</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Spring Cloud</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Spring Security</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">WebFlux</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">Node.js</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >TypeScript</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">React</span>
+            </div>
+          </div>
+
+          <!-- Row 2: AI / Data -->
+          <div
+            class="glass-panel p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+          >
+            <div class="w-32 shrink-0">
+              <span
+                class="px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-semibold font-mono"
+              >
+                AI / Data
+              </span>
+            </div>
+            <div class="flex flex-wrap gap-2 text-sm text-slate-300 font-mono">
+              <span
+                class="px-3 py-1 rounded-md bg-slate-800/80 border border-cyan-500/30 text-cyan-300"
+                >RAG</span
+              >
+              <span
+                class="px-3 py-1 rounded-md bg-slate-800/80 border border-cyan-500/30 text-cyan-300"
+                >Agents</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Google ADK</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >AWS Bedrock</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">LLM APIs</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Vector Databases</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">BigQuery</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">Postgres</span>
+            </div>
+          </div>
+
+          <!-- Row 3: Cloud -->
+          <div
+            class="glass-panel p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+          >
+            <div class="w-32 shrink-0">
+              <span
+                class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold font-mono"
+              >
+                Cloud
+              </span>
+            </div>
+            <div class="flex flex-wrap gap-2 text-sm text-slate-300 font-mono">
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">AWS</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Google Cloud</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Cloud Run</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Functions / Lambda</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Vertex AI</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Cloud SQL</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">DynamoDB</span>
+            </div>
+          </div>
+
+          <!-- Row 4: Platform -->
+          <div
+            class="glass-panel p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+          >
+            <div class="w-32 shrink-0">
+              <span
+                class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold font-mono"
+              >
+                Platform
+              </span>
+            </div>
+            <div class="flex flex-wrap gap-2 text-sm text-slate-300 font-mono">
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">Docker</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Kubernetes</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >Terraform</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80">Jenkins</span>
+              <span class="px-3 py-1 rounded-md bg-slate-800/80"
+                >GitHub Actions</span
+              >
+              <span class="px-3 py-1 rounded-md bg-slate-800/80 text-amber-300"
+                >API-first Architecture</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-slate-950/60 border-y border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Industry Background</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Domain Experience
+          </h2>
+          <p class="text-slate-400 text-sm mt-2">
+            A recurring theme: modernize the platform while making data and
+            workflows more intelligent.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass-card rounded-2xl p-6 border-slate-800">
+            <div class="text-cyan-400 text-2xl mb-4">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              FinTech / Payments
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Transaction platforms, payment workflows, field-agent ecosystems,
+              monitoring & automation.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-slate-800">
+            <div class="text-blue-400 text-2xl mb-4">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              BFSI / Capital Markets
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Financial workflows, risk signals, data-intensive systems, and
+              architectural modernization.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-slate-800">
+            <div class="text-emerald-400 text-2xl mb-4">
+              <i class="fas fa-heartpulse"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Healthcare</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Patient-caregiver communication, Nephracare management platform,
+              BMI health compass, SaaS & AI workflows.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-slate-800">
+            <div class="text-amber-400 text-2xl mb-4">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Digital Platforms</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              CRM, CMS, eCommerce, media, and legacy app modernization
+              initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 relative" id="portfolio">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Case Studies</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Portfolio Stories
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Portfolio 01 -->
+          <div
+            class="glass-panel p-8 rounded-2xl border-cyan-500/40 relative group overflow-hidden"
+          >
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-mono font-bold text-cyan-400/40"
+                >01</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold font-mono border border-cyan-500/20"
+                >AI + Data</span
+              >
+            </div>
+            <h3
+              class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"
+            >
+              FinSight AI
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              AI-powered financial decision intelligence for MSMEs. Integrates
+              agentic reasoning with cloud data stores to explain and recommend
+              financial strategy.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 border-t border-slate-800 pt-4"
+            >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >BigQuery</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Cloud SQL</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Spring Boot</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800 text-cyan-300"
+                >AI CFO Agent</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Google ADK</span
+              >
+            </div>
+          </div>
+
+          <!-- Portfolio 02 -->
+          <div
+            class="glass-panel p-8 rounded-2xl border-slate-800 hover:border-blue-500/40 relative group overflow-hidden transition-colors"
+          >
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-mono font-bold text-slate-700"
+                >02</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold font-mono border border-blue-500/20"
+                >FinTech</span
+              >
+            </div>
+            <h3
+              class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors"
+            >
+              Payment Platform
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Mobile payment platform supporting field-agent operations, offline
+              capabilities, secure identity controls, and SMS reporting
+              automation.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 border-t border-slate-800 pt-4"
+            >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Java Spring Boot</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >JWT / RBAC</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >SMS Reporting</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Field Operations</span
+              >
+            </div>
+          </div>
+
+          <!-- Portfolio 03 -->
+          <div
+            class="glass-panel p-8 rounded-2xl border-slate-800 hover:border-emerald-500/40 relative group overflow-hidden transition-colors"
+          >
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-mono font-bold text-slate-700"
+                >03</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold font-mono border border-emerald-500/20"
+                >Event-driven</span
+              >
+            </div>
+            <h3
+              class="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors"
+            >
+              Transaction Monitoring
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Real-time transaction monitoring and fraud-oriented prototype
+              processing high-volume financial event streams with instant
+              alerting.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 border-t border-slate-800 pt-4"
+            >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >React + TypeScript</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Node.js</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >GraphQL</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Apache Kafka</span
+              >
+            </div>
+          </div>
+
+          <!-- Portfolio 04 -->
+          <div
+            class="glass-panel p-8 rounded-2xl border-slate-800 hover:border-amber-500/40 relative group overflow-hidden transition-colors"
+          >
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-mono font-bold text-slate-700"
+                >04</span
+              >
+              <span
+                class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold font-mono border border-amber-500/20"
+                >Healthcare</span
+              >
+            </div>
+            <h3
+              class="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors"
+            >
+              Medical Interaction
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Patient-caretaker communication concept for hospitals featuring
+              multilingual UX, automated dispatch workflows, and responsive
+              escalation paths.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 border-t border-slate-800 pt-4"
+            >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Mobile + Backend</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Multilingual UX</span
+              >
+              <span
+                class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800"
+                >Workflow Automation</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-slate-950 border-y border-slate-800/80 relative overflow-hidden"
+      id="finsight-demo"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12"
+        >
+          <div>
+            <span
+              class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold font-mono border border-cyan-500/20 uppercase"
+            >
+              Flagship Demo Simulator
+            </span>
+            <h2
+              class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-3"
+            >
+              FinSight AI <span class="text-cyan-400">Live Journey</span>
+            </h2>
+            <p class="text-slate-400 text-base mt-2 max-w-2xl">
+              Financial Decision Intelligence for MSMEs. Experience how
+              cloud-native data, backend APIs, and agentic AI interact under
+              human supervision.
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <span
+              class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-2 rounded-lg border border-slate-800 inline-block"
+            >
+              Google Cloud • Google ADK • Spring Boot • AI CFO Agent
+            </span>
+          </div>
+        </div>
+
+        <!-- Demo Journey Stepper Cards -->
+        <div
+          class="glass-panel rounded-2xl p-6 md:p-8 border-cyan-500/30 shadow-2xl"
+        >
+          <!-- Stepper Progress Bar -->
+          <div
+            class="grid grid-cols-5 gap-2 mb-8 text-center text-xs font-mono"
+          >
+            <button
+              onclick="setDemoStep(1)"
+              id="step-btn-1"
+              class="py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-bold transition-all"
+            >
+              1. Question
+            </button>
+            <button
+              onclick="setDemoStep(2)"
+              id="step-btn-2"
+              class="py-2.5 rounded-lg bg-slate-800 text-slate-400 transition-all"
+            >
+              2. Data & KPIs
+            </button>
+            <button
+              onclick="setDemoStep(3)"
+              id="step-btn-3"
+              class="py-2.5 rounded-lg bg-slate-800 text-slate-400 transition-all"
+            >
+              3. AI Reasoning
+            </button>
+            <button
+              onclick="setDemoStep(4)"
+              id="step-btn-4"
+              class="py-2.5 rounded-lg bg-slate-800 text-slate-400 transition-all"
+            >
+              4. Recommendation
+            </button>
+            <button
+              onclick="setDemoStep(5)"
+              id="step-btn-5"
+              class="py-2.5 rounded-lg bg-slate-800 text-slate-400 transition-all"
+            >
+              5. Human Action
+            </button>
+          </div>
+
+          <!-- Display Step Content -->
+          <div
+            class="bg-slate-900/90 rounded-xl p-6 sm:p-8 border border-slate-800 min-h-[300px] flex flex-col justify-between"
+            id="demo-content-area"
+          >
+            <!-- Dynamic Content Injected Here via JavaScript -->
+          </div>
+
+          <!-- Controls -->
+          <div
+            class="flex items-center justify-between mt-6 pt-4 border-t border-slate-800"
+          >
+            <button
+              id="prev-step-btn"
+              onclick="prevStep()"
+              class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium transition-colors disabled:opacity-40"
+              disabled
+            >
+              <i class="fas fa-arrow-left mr-2"></i> Previous
+            </button>
+            <span id="step-indicator" class="text-xs font-mono text-cyan-400"
+              >Step 1 of 5</span
+            >
+            <button
+              id="next-step-btn"
+              onclick="nextStep()"
+              class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-bold transition-colors"
+            >
+              Next Step <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <p class="text-xs text-center text-slate-500 mt-4 italic">
+          Key principle: AI supports financial decisions; it does not silently
+          make them.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Methodology</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            How I Work with Clients & Startups
+          </h2>
+          <p class="text-slate-400 text-sm mt-2">
+            Engagement can start small: a focused architecture review, technical
+            spike, or AI prototype can become a longer-term collaboration.
+          </p>
+        </div>
+
+        <!-- Process steps -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-20">
+          <div
+            class="glass-panel p-5 rounded-xl border-slate-800 text-center relative"
+          >
+            <div class="text-cyan-400 font-mono text-xs mb-2">01</div>
+            <h3 class="font-bold text-white mb-2">Discover</h3>
+            <p class="text-xs text-slate-400">
+              Business objective, constraints, and success criteria.
+            </p>
+          </div>
+          <div
+            class="glass-panel p-5 rounded-xl border-slate-800 text-center relative"
+          >
+            <div class="text-cyan-400 font-mono text-xs mb-2">02</div>
+            <h3 class="font-bold text-white mb-2">Architect</h3>
+            <p class="text-xs text-slate-400">
+              Solution blueprint, Data + APIs, security models.
+            </p>
+          </div>
+          <div
+            class="glass-panel p-5 rounded-xl border-slate-800 text-center relative"
+          >
+            <div class="text-cyan-400 font-mono text-xs mb-2">03</div>
+            <h3 class="font-bold text-white mb-2">Build</h3>
+            <p class="text-xs text-slate-400">
+              Prototype / MVP, AI workflows, cloud infrastructure.
+            </p>
+          </div>
+          <div
+            class="glass-panel p-5 rounded-xl border-slate-800 text-center relative"
+          >
+            <div class="text-cyan-400 font-mono text-xs mb-2">04</div>
+            <h3 class="font-bold text-white mb-2">Validate</h3>
+            <p class="text-xs text-slate-400">
+              Evaluation, observability, user feedback loops.
+            </p>
+          </div>
+          <div
+            class="glass-panel p-5 rounded-xl border-slate-800 text-center relative"
+          >
+            <div class="text-cyan-400 font-mono text-xs mb-2">05</div>
+            <h3 class="font-bold text-white mb-2">Handover</h3>
+            <p class="text-xs text-slate-400">
+              Documentation, deployment, developer enablement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ways to Collaborate Grid -->
+        <h3 class="text-xl font-bold text-white mb-8 text-center">
+          Ways to Collaborate
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="text-blue-400 text-xl mb-3">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Technical Consulting</h4>
+            <p class="text-xs text-slate-400">
+              Architecture reviews, Cloud/AI strategy, Modernization roadmap.
+            </p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="text-cyan-400 text-xl mb-3">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Hands-on Build</h4>
+            <p class="text-xs text-slate-400">
+              AI prototype, Backend/API delivery, Cloud implementation.
+            </p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="text-emerald-400 text-xl mb-3">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Fractional Tech Lead</h4>
+            <p class="text-xs text-slate-400">
+              Technical direction, Engineering decisions, Delivery oversight.
+            </p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="text-amber-400 text-xl mb-3">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Workshops & Enablement</h4>
+            <p class="text-xs text-slate-400">
+              AI engineering, Cloud-native patterns, Developer enablement.
+            </p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl sm:col-span-2 lg:col-span-2">
+            <div class="text-purple-400 text-xl mb-3">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h4 class="font-bold text-white mb-2">Product Collaboration</h4>
+            <p class="text-xs text-slate-400">
+              Prototype partner, Technical co-creation, Validation & iteration
+              for emerging start-ups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-slate-950/60 border-y border-slate-800/80"
+      id="outcomes"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Metrics</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Delivery Outcomes
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+          <!-- Metric 1 -->
+          <div class="glass-panel p-6 rounded-2xl text-center border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-2">
+              60-70%
+            </div>
+            <div class="text-xs font-bold text-white mb-1">
+              Workflow Dev Time
+            </div>
+            <p class="text-[11px] text-slate-400">
+              Reduction for AI-agent templates + RAG patterns
+            </p>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="glass-panel p-6 rounded-2xl text-center border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-2">
+              30%
+            </div>
+            <div class="text-xs font-bold text-white mb-1">
+              Decision Accuracy
+            </div>
+            <p class="text-[11px] text-slate-400">
+              Improvement reported with RAG + guardrail patterns
+            </p>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="glass-panel p-6 rounded-2xl text-center border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-2">
+              30%
+            </div>
+            <div class="text-xs font-bold text-white mb-1">Faster AI Dev</div>
+            <p class="text-[11px] text-slate-400">
+              Accelerated development in delivery workflows
+            </p>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="glass-panel p-6 rounded-2xl text-center border-slate-800">
+            <div
+              class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-2"
+            >
+              20-25%
+            </div>
+            <div class="text-xs font-bold text-white mb-1">
+              Cloud Cost Reduction
+            </div>
+            <p class="text-[11px] text-slate-400">
+              Application modernization initiatives
+            </p>
+          </div>
+
+          <!-- Metric 5 -->
+          <div class="glass-panel p-6 rounded-2xl text-center border-slate-800">
+            <div
+              class="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-2"
+            >
+              38%
+            </div>
+            <div class="text-xs font-bold text-white mb-1">
+              Fewer Prod Issues
+            </div>
+            <p class="text-[11px] text-slate-400">
+              Reduction in production defects after modernization
+            </p>
+          </div>
+        </div>
+
+        <p class="text-center text-xs text-slate-500 italic">
+          * Note: These figures are project-specific client outcomes, not
+          universal benchmarks.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 relative" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="glass-panel rounded-3xl p-8 sm:p-12 border-cyan-500/30 relative overflow-hidden"
+        >
+          <div
+            class="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+          ></div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
+          >
+            <div>
+              <span
+                class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+                >Looking Ahead</span
+              >
+              <h2
+                class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-2 mb-6"
+              >
+                Let's build something
+                <span class="gradient-text-cyan">useful</span> with AI + Cloud.
+              </h2>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex items-start space-x-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1"></i>
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-white">AI-enabled FinTech:</strong>
+                    Decision intelligence, agentic workflows, risk & operations.
+                  </p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1"></i>
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-white">Cloud-native products:</strong>
+                    Modern APIs, distributed systems, serverless, platform
+                    engineering.
+                  </p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1"></i>
+                  <p class="text-sm text-slate-300">
+                    <strong class="text-white">AI Modernization:</strong> RAG,
+                    agents, evaluation, and responsible deployment.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 font-mono"
+              >
+                <i class="fas fa-lightbulb text-amber-400 mr-2"></i>
+                Ideal starting point: A real business problem + a small scope +
+                a demonstrable outcome.
+              </div>
+            </div>
+
+            <!-- Interactive Contact Card -->
+            <div
+              class="bg-slate-900/90 rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                Initiate Collaboration
+              </h3>
+              <p class="text-xs text-slate-400 mb-6">
+                Send a direct message or review public projects.
+              </p>
+
+              <form
+                id="contact-form"
+                onsubmit="handleFormSubmit(event)"
+                class="space-y-4"
+              >
+                <div>
+                  <label class="block text-xs font-mono text-slate-400 mb-1"
+                    >Your Name / Organization</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Fintech Founders / Tech Lead"
+                    class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-slate-400 mb-1"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    required
+                    placeholder="name@company.com"
+                    class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-slate-400 mb-1"
+                    >Scope / Objective</label
+                  >
+                  <textarea
+                    rows="3"
+                    required
+                    placeholder="Tell me about your project, architecture review or AI prototype goals..."
+                    class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:opacity-90 shadow-lg shadow-cyan-500/20 transition-all"
+                >
+                  Send Message
+                </button>
+              </form>
+
+              <div
+                id="form-feedback"
+                class="hidden mt-4 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs text-center"
+              >
+                Thank you! Message logged. You can also explore code
+                repositories directly on GitHub.
+              </div>
+
+              <div
+                class="mt-6 pt-6 border-t border-slate-800 flex items-center justify-between"
+              >
+                <span class="text-xs text-slate-500">GitHub Repository:</span>
+                <a
+                  href="https://github.com/stratopedia"
+                  target="_blank"
+                  class="text-xs font-mono text-cyan-400 hover:underline flex items-center"
+                >
+                  <i class="fab fa-github mr-1.5"></i> github.com/stratopedia
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-8 border-t border-slate-800/80 bg-slate-950 text-xs text-slate-500"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <div>
+          <p>
+            <strong class="text-slate-300">Sheetal G.</strong> — Independent AI
+            & Cloud Technology Consultant
+          </p>
+          <p class="text-[11px] mt-0.5">
+            FinTech • BFSI • AI Engineering • Cloud Modernization
+          </p>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a
+            href="https://github.com/stratopedia"
+            target="_blank"
+            class="hover:text-cyan-400 transition-colors"
+            >GitHub</a
+          >
+          <a href="#about" class="hover:text-cyan-400 transition-colors"
+            >Back to Top</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // FinSight AI Live Journey Simulator State
+      let currentStep = 1;
+
+      const demoStepsData = {
+        1: {
+          title: "1. Business Question",
+          badge: "Trigger Event",
+          badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+          icon: "fa-question-circle",
+          question: '"Why is cash pressure increasing for our MSME platform?"',
+          details:
+            "Executive or Finance Lead prompts the AI decision system to analyze unexpected liquidity drops over Q3.",
+          metrics: [
+            { label: "Alert Severity", value: "High (Cash Pressure)" },
+            { label: "Target Entity", value: "MSME Portfolio A" },
+          ],
+        },
+        2: {
+          title: "2. Data & KPIs Aggregation",
+          badge: "Data Layer",
+          badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+          icon: "fa-database",
+          question:
+            "Retrieving financial telemetry via BigQuery & Cloud SQL APIs...",
+          details: "System pulls real-time operational indicators:",
+          metrics: [
+            { label: "DSO (Days Sales Outstanding)", value: "+18 days YoY" },
+            {
+              label: "DSCR (Debt Service Coverage)",
+              value: "1.12 (Threshold 1.25)",
+            },
+            { label: "Overdue Invoices", value: "$142,000 (>45 Days)" },
+            { label: "Liquidity Runway", value: "22 Days Remaining" },
+          ],
+        },
+        3: {
+          title: "3. AI Reasoning (AI CFO Agent)",
+          badge: "Google ADK Agentic Logic",
+          badgeColor: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+          icon: "fa-brain",
+          question: "Connecting risk signals to underlying drivers...",
+          details:
+            "AI CFO Agent parses transaction evidence: Key buyer delayed payment cycles by 20 days while inventory upfront purchase increased 15%. RAG pipeline retrieves historical supplier extension policies.",
+          metrics: [
+            { label: "Primary Pressure", value: "Delayed Receivables" },
+            { label: "Confidence Score", value: "94% (RAG verified)" },
+          ],
+        },
+        4: {
+          title: "4. Automated Recommendation",
+          badge: "Decision Intelligence",
+          badgeColor:
+            "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+          icon: "fa-lightbulb",
+          question: "Action Plan: Rebalance Working Capital",
+          details:
+            "1) Issue early-payment discount (2%) to Top 3 delayed debtors.\n2) Request 15-day supplier credit window extension.\n3) Activate $50k micro-revolving line.",
+          metrics: [
+            { label: "Projected Runway", value: "Extended to +45 Days" },
+            { label: "Cost of Action", value: "~$1,200 in discounts" },
+          ],
+        },
+        5: {
+          title: "5. Human Decision & Action",
+          badge: "Human-in-the-Loop",
+          badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+          icon: "fa-user-check",
+          question: "Finance User Reviews, Accepts, Edits, or Rejects",
+          details:
+            "Human supervisor approves early-payment discount trigger while adjusting credit request limits. System dispatches API triggers to payment gateway.",
+          metrics: [
+            { label: "Status", value: "Approved & Executed" },
+            { label: "Audit Log", value: "Immutable record saved" },
+          ],
+        },
+      };
+
+      function renderDemoStep(step) {
+        const data = demoStepsData[step];
+        const area = document.getElementById("demo-content-area");
+
+        let metricsHTML = "";
+        if (data.metrics) {
+          metricsHTML =
+            `<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">` +
+            data.metrics
+              .map(
+                (m) => `
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                            <span class="block text-[10px] text-slate-500 font-mono">${m.label}</span>
+                            <span class="block text-xs font-bold text-cyan-400 mt-0.5">${m.value}</span>
+                        </div>
+                    `,
+              )
+              .join("") +
+            `</div>`;
+        }
+
+        area.innerHTML = `
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono px-3 py-1 rounded-full border ${data.badgeColor}">
+                            ${data.badge}
+                        </span>
+                        <span class="text-slate-500 text-xs font-mono"><i class="fas ${data.icon} mr-1"></i> FinSight Engine</span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mb-2">${data.title}</h3>
+                    <p class="text-lg text-cyan-300 font-mono mb-4">${data.question}</p>
+                    <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">${data.details}</p>
+
+                    ${metricsHTML}
+                </div>
+            `;
+
+        // Update Stepper buttons state
+        for (let i = 1; i <= 5; i++) {
+          const btn = document.getElementById(`step-btn-${i}`);
+          if (i === step) {
+            btn.className =
+              "py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-bold transition-all shadow-lg shadow-cyan-500/20";
+          } else {
+            btn.className =
+              "py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 transition-all";
+          }
+        }
+
+        // Navigation Buttons State
+        document.getElementById("prev-step-btn").disabled = step === 1;
+        document.getElementById("next-step-btn").disabled = step === 5;
+        document.getElementById("step-indicator").innerText =
+          `Step ${step} of 5`;
+      }
+
+      function setDemoStep(step) {
+        currentStep = step;
+        renderDemoStep(currentStep);
+      }
+
+      function nextStep() {
+        if (currentStep < 5) {
+          currentStep++;
+          renderDemoStep(currentStep);
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          renderDemoStep(currentStep);
+        }
+      }
+
+      // Contact Form Handling
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const feedback = document.getElementById("form-feedback");
+        feedback.classList.remove("hidden");
+        e.target.reset();
+        setTimeout(() => {
+          feedback.classList.add("hidden");
+        }, 6000);
+      }
+
+      // Initialize First Step on Load
+      window.onload = function () {
+        renderDemoStep(1);
+      };
+    </script>
+  </body>
+</html>
