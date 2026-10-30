@@ -117,6 +117,204 @@
         -webkit-text-fill-color: transparent;
       }
 
+      .academic-section {
+        margin: relative;
+        padding: 120px 0;
+        color: var(--text, #e5e7eb);
+      }
+
+      .academic-section .section-label {
+        color: var(--accent, #60a5fa);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
+
+      .academic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .academic-header h2 {
+        font-size: clamp(28px, 4vw, 38px);
+        margin: 0 0 10px;
+      }
+
+      .academic-subtitle {
+        color: var(--muted, #9ca3af);
+        font-size: 17px;
+      }
+
+      .academic-tag,
+      .academic-tags span {
+        border: 1px solid var(--border, #374151);
+        border-radius: 30px;
+        padding: 9px 15px;
+        font-size: 12px;
+        color: var(--accent, #60a5fa);
+      }
+
+      .academic-intro {
+        max-width: 900px;
+        line-height: 1.8;
+        color: var(--muted, #9ca3af);
+        margin: 22px 0 30px;
+      }
+
+      .academic-education,
+      .academic-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin: 25px 0 40px;
+      }
+
+      .academic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .academic-card {
+        background: var(--card, #111827);
+        border: 1px solid var(--border, #374151);
+        border-radius: 14px;
+        padding: 23px;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .academic-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent, #60a5fa);
+      }
+
+      .academic-icon {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 14px;
+      }
+
+      .academic-card h3 {
+        font-size: 17px;
+        margin: 0 0 12px;
+      }
+
+      .academic-card p,
+      .academic-card li {
+        color: var(--muted, #9ca3af);
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .academic-card ul {
+        padding-left: 18px;
+        margin-bottom: 0;
+      }
+
+      .academic-heading {
+        font-size: 22px;
+        margin: 45px 0 20px;
+      }
+
+      .academic-method-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin: 25px 0 40px;
+      }
+
+      .academic-method {
+        padding: 20px;
+        border-left: 3px solid var(--accent, #60a5fa);
+        background: var(--card, #111827);
+        border-radius: 8px;
+      }
+
+      .academic-method strong {
+        font-size: 14px;
+      }
+
+      .academic-method p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: var(--muted, #9ca3af);
+        margin-bottom: 0;
+      }
+
+      .academic-industry {
+        padding: 25px;
+        border: 1px solid var(--border, #374151);
+        border-radius: 14px;
+        line-height: 1.8;
+        color: var(--muted, #9ca3af);
+      }
+
+      .academic-industry li {
+        margin: 8px 0;
+      }
+
+      .academic-cta {
+        margin-top: 40px;
+        padding: 30px;
+        border: 1px solid var(--border, #374151);
+        border-radius: 16px;
+        background: var(--card, #111827);
+      }
+
+      .academic-cta h3 {
+        font-size: 23px;
+      }
+
+      .academic-cta p {
+        color: var(--muted, #9ca3af);
+        line-height: 1.8;
+      }
+
+      .academic-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .academic-highlight {
+        margin-top: 25px;
+        font-weight: 600;
+        color: var(--accent, #60a5fa) !important;
+      }
+
+      /* Responsive layout */
+
+      @media (max-width: 900px) {
+        .academic-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 600px) {
+        .academic-section {
+          padding: 50px 0;
+        }
+
+        .academic-grid,
+        .academic-education,
+        .academic-method-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .academic-header {
+          align-items: flex-start;
+        }
+
+        .academic-cta {
+          padding: 22px;
+        }
+      }
+
       /* Custom Timeline line */
       .timeline-line::before {
         content: "";
@@ -176,6 +374,9 @@
           >
           <a href="#tech-stack" class="hover:text-cyan-400 transition-colors"
             >Tech Stack</a
+          >
+          <a href="#academic" class="hover:text-cyan-400 transition-colors"
+            >Academic & Training</a
           >
           <a href="#portfolio" class="hover:text-cyan-400 transition-colors"
             >Portfolio</a
@@ -917,6 +1118,284 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ACADEMIC & TECHNICAL TRAINING SECTION -->
+    <section class="py-20 relative" id="academic">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-mono text-cyan-400 tracking-widest uppercase"
+            >Academic & Industry Enablement</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2"
+          >
+            Academic & Technical Training
+          </h2>
+          <p class="text-slate-400 text-sm mt-3 italic">
+            Bridging Academic Learning with Real-World Engineering
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+          <span
+            class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-cyan-300 border-cyan-500/20 flex items-center"
+          >
+            <i class="fas fa-compass mr-2 text-cyan-400"></i> Industry
+            Practitioner
+          </span>
+          <span
+            class="px-4 py-2 rounded-lg glass-card text-xs sm:text-sm font-medium text-blue-300 border-blue-500/20 flex items-center"
+          >
+            <i class="fas fa-cloud mr-2 text-blue-400"></i> Technical Educator
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="max-w-3xl mx-auto glass-panel rounded-xl p-6 border-slate-700"
+      >
+        <div class="flex items-start space-x-4">
+          <h4 class="text-base font-bold text-white"></h4>
+          <p class="text-sm text-slate-300 mt-1">
+            I bring 15+ years of IT industry experience in software engineering,
+            solution architecture and technology consulting into technical
+            education. My focus is on simplifying complex concepts, encouraging
+            practical problem-solving, and helping learners develop the
+            confidence to build real-world software solutions.
+          </p>
+        </div>
+      </div>
+
+    </br>
+       <div
+        class="max-w-3xl mx-auto">    
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div class="w-1.5 h-full absolute top-0 left-0 bg-blue-500"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas">🎓</i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              M.Tech in Software Systems</p>
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+            Birla Institute of Technology Science, Pilani  
+            </p>
+          </div>
+
+          <div
+            class="glass-card rounded-2xl p-6 relative overflow-hidden group"
+          >
+            <div class="w-1.5 h-full absolute top-0 left-0 bg-amber-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas">📘</i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              B.E in Information Science & Engineering
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Visvesvaraya Technological University (VTU)
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <br/>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p style="text-align: center"
+            class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-normal"
+          >
+            <strong class="text-slate-200">Teaching & Training Domains</strong>
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cap 1 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-cyan-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas text-cyan-400 text-xl">💻</i>
+              <h3 class="font-bold text-lg text-white">Fundamentals</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i> Core Java and OOP Concepts
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i>
+                Python Fundamentals
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i> SOLID Principles and Clean Code
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-400 text-xs mr-2.5"></i>
+                Data Structures and Problem Solving
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 2 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-blue-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas text-blue-400 text-xl">⚙️</i>
+              <h3 class="font-bold text-lg text-white">Backend Engineering</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i> Java 8+ and Spring Boot
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                Spring Security and Microservices
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                REST API Development
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                SQL and Database Integration
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-400 text-xs mr-2.5"></i>
+                Node.js and TypeScript
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 3 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-emerald-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-cloud text-emerald-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Cloud & DevOps</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                AWS and Google Cloud
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                Cloud-Native Architecture
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                Docker and Kubernetes
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i>
+                CI/CD and Deployment
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 4 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-amber-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-robot text-amber-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">AI & Emerging Tech</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Generative AI Fundamentals
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Retrieval-Augmented Generation (RAG)
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                AI Agents and Workflows
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                AI-Powered Application Development
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 5 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-amber-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-cubes text-amber-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Software Architecture</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Application Design and Architecture
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                System Design Fundamentals
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Design Patterns
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Software Documentation
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Testing and Debugging
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cap 6 -->
+          <div
+            class="glass-panel p-6 rounded-2xl border-slate-800 hover:border-amber-500/50 transition-colors"
+          >
+            <div class="flex items-center space-x-3 mb-4">
+              <i class="fas fa-chart-line text-amber-400 text-xl"></i>
+              <h3 class="font-bold text-lg text-white">Industry Practices</h3>
+            </div>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Agile Software Development
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Project-Based Learning
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Requirement Analysis
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Real-World Case Studies
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-amber-400 text-xs mr-2.5"></i>
+                Technical Interview Preparation
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
     </section>
 
     <section class="py-20 bg-slate-950/60 border-y border-slate-800/80">
